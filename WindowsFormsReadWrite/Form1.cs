@@ -43,6 +43,7 @@ namespace WindowsFormsReadWrite
         }
 
         private void button2_Click(object sender, EventArgs e)
+        
         {
             StreamReader read = new StreamReader(textBox1.Text);
             RichtextBox1.Text = read.ReadToEnd();
