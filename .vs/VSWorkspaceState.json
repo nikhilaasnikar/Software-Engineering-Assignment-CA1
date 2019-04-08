@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WindowsFormsReadWrite",
+    "\\WindowsFormsReadWrite\\WindowsFormsReadWrite"
   ],
-  "SelectedNode": "\\index.cs",
+  "SelectedNode": "\\WindowsFormsReadWrite\\WindowsFormsReadWrite\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
