@@ -16,36 +16,77 @@ namespace WindowsFormsReadWrite
         public Form1()
         {
             InitializeComponent();
+            selectfolder.RootFolder = Environment.SpecialFolder.Desktop;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       /* private void button1_Click(object sender, EventArgs e)
         {
             
 
-        }
+        }*/
 
-        private void button3_Click(object sender, EventArgs e)
+        /*private void button3_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            OpenFileDialog of = new OpenFileDialog();
-            of.ShowDialog();
-            textBox1.Text = of.FileName;
+            if (selectfolder.ShowDialog() == DialogResult.OK)
+            {
+                List<string> dirlist = new List<string>();
+                List<string> folderList = new List<string>();
+                string path = selectfolder.SelectedPath;
+                string[] files = Directory.GetFiles(path);
+                tbCurrentDir.Text = Path.GetDirectoryName(path);
+                foreach (string filename in files)
+                {
+                    if (Path.GetExtension(filename).Contains(".txt"))
+                    {
+                        tbCurrent.Text = Path.GetFileName(filename)+"\n";
+                         
+                        StreamReader stream = new StreamReader(filename);
+                        
+                        string[] word =stream.ReadToEnd().Split(' ');
+                        Array.Sort(word);
+
+                      string sortedfile = "\\sorted" + Path.GetFileName(filename);
+                       StreamWriter streamWriter = new StreamWriter(Path.GetFullPath(path)+sortedfile);
+                        //Console.WriteLine(Path.GetFullPath(path) + sortedfile);
+                        foreach ( string sorted in word)
+                        {
+                            
+                            streamWriter.WriteLine(sorted);
+                        }
+
+                        streamWriter.Close();
+                           
+                        
+                        
+                        dirlist.Add(Path.GetPathRoot(path));
+                        folderList.Add(sortedfile);
+
+                    }
+                    
+                }
+                DriveList.DataSource = dirlist;
+                FolderList.DataSource= folderList;
+
+            }
+            
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        /*private void button2_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader(textBox1.Text);
-            RichtextBox1.Text = sr.ReadToEnd();
+            StreamReader sr = new StreamReader(tbCurrentDir.Text);
+            tbCurrent.Text = sr.ReadToEnd();
             sr.Close();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(textBox1.Text, true);
+            StreamWriter sw = new StreamWriter(tbCurrentDir.Text, true);
             sw.WriteLine(textBox2.Text);
             sw.Close();
         }
@@ -89,5 +130,7 @@ namespace WindowsFormsReadWrite
             foreach (DriveInfo di in DriveInfo.GetDrives())
                 DriveList.Items.Add(di);
         }
+        */
+       
     }
 }

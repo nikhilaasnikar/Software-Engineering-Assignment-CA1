@@ -8,3 +8,13 @@ C:\Users\RSC\source\repos\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\
 C:\Users\RSC\source\repos\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.csproj.CoreCompileInputs.cache
 C:\Users\RSC\source\repos\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.exe
 C:\Users\RSC\source\repos\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.pdb
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\bin\Debug\WindowsFormsReadWrite.exe.config
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\bin\Debug\WindowsFormsReadWrite.exe
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\bin\Debug\WindowsFormsReadWrite.pdb
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.csprojAssemblyReference.cache
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.Form1.resources
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.Properties.Resources.resources
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.csproj.GenerateResource.cache
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.csproj.CoreCompileInputs.cache
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.exe
+C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.pdb

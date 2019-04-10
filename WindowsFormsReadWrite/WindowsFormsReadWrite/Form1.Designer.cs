@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbCurrentDir = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.RichtextBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbCurrent = new System.Windows.Forms.TextBox();
+            this.btnselectfolder = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.DriveList = new System.Windows.Forms.ListBox();
             this.FolderList = new System.Windows.Forms.ListBox();
             this.FilesList = new System.Windows.Forms.ListBox();
+            this.selectfolder = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbCurrentDir
             // 
-            this.textBox1.Location = new System.Drawing.Point(224, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 32);
-            this.textBox1.TabIndex = 0;
+            this.tbCurrentDir.Location = new System.Drawing.Point(224, 44);
+            this.tbCurrentDir.Multiline = true;
+            this.tbCurrentDir.Name = "tbCurrentDir";
+            this.tbCurrentDir.Size = new System.Drawing.Size(206, 32);
+            this.tbCurrentDir.TabIndex = 0;
             // 
             // textBox2
             // 
@@ -54,23 +55,23 @@
             this.textBox2.Size = new System.Drawing.Size(206, 20);
             this.textBox2.TabIndex = 2;
             // 
-            // RichtextBox1
+            // tbCurrent
             // 
-            this.RichtextBox1.Location = new System.Drawing.Point(224, 122);
-            this.RichtextBox1.Multiline = true;
-            this.RichtextBox1.Name = "RichtextBox1";
-            this.RichtextBox1.Size = new System.Drawing.Size(399, 131);
-            this.RichtextBox1.TabIndex = 3;
+            this.tbCurrent.Location = new System.Drawing.Point(224, 122);
+            this.tbCurrent.Multiline = true;
+            this.tbCurrent.Name = "tbCurrent";
+            this.tbCurrent.Size = new System.Drawing.Size(399, 131);
+            this.tbCurrent.TabIndex = 3;
             // 
-            // button1
+            // btnselectfolder
             // 
-            this.button1.Location = new System.Drawing.Point(447, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 33);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "....";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnselectfolder.Location = new System.Drawing.Point(447, 44);
+            this.btnselectfolder.Name = "btnselectfolder";
+            this.btnselectfolder.Size = new System.Drawing.Size(84, 32);
+            this.btnselectfolder.TabIndex = 4;
+            this.btnselectfolder.Text = "SelectFolder";
+            this.btnselectfolder.UseVisualStyleBackColor = true;
+            this.btnselectfolder.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -80,7 +81,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "ReadText";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+           // this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -90,7 +91,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "WriteText";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+           // this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // DriveList
             // 
@@ -99,7 +100,7 @@
             this.DriveList.Name = "DriveList";
             this.DriveList.Size = new System.Drawing.Size(180, 95);
             this.DriveList.TabIndex = 7;
-            this.DriveList.SelectedIndexChanged += new System.EventHandler(this.DriveList_SelectedIndexChanged);
+            //this.DriveList.SelectedIndexChanged += new System.EventHandler(this.DriveList_SelectedIndexChanged);
             // 
             // FolderList
             // 
@@ -108,7 +109,7 @@
             this.FolderList.Name = "FolderList";
             this.FolderList.Size = new System.Drawing.Size(204, 95);
             this.FolderList.TabIndex = 8;
-            this.FolderList.SelectedIndexChanged += new System.EventHandler(this.FolderList_SelectedIndexChanged);
+            //this.FolderList.SelectedIndexChanged += new System.EventHandler(this.FolderList_SelectedIndexChanged);
             // 
             // FilesList
             // 
@@ -117,7 +118,7 @@
             this.FilesList.Name = "FilesList";
             this.FilesList.Size = new System.Drawing.Size(246, 95);
             this.FilesList.TabIndex = 9;
-            this.FilesList.SelectedIndexChanged += new System.EventHandler(this.FilesList_SelectedIndexChanged);
+            //this.FilesList.SelectedIndexChanged += new System.EventHandler(this.FilesList_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -129,13 +130,13 @@
             this.Controls.Add(this.DriveList);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.RichtextBox1);
+            this.Controls.Add(this.btnselectfolder);
+            this.Controls.Add(this.tbCurrent);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbCurrentDir);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+           // this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,15 +144,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbCurrentDir;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox RichtextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbCurrent;
+        private System.Windows.Forms.Button btnselectfolder;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox DriveList;
         private System.Windows.Forms.ListBox FolderList;
         private System.Windows.Forms.ListBox FilesList;
+        private System.Windows.Forms.FolderBrowserDialog selectfolder;
     }
 }
 
