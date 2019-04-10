@@ -52,7 +52,7 @@ namespace WindowsFormsReadWrite
 
                       string sortedfile = "\\sorted" + Path.GetFileName(filename);
                        StreamWriter streamWriter = new StreamWriter(Path.GetFullPath(path)+sortedfile);
-                        //Console.WriteLine(Path.GetFullPath(path) + sortedfile);
+                        //Test//Console.WriteLine(Path.GetFullPath(path) + sortedfile);
                         foreach ( string sorted in word)
                         {
                             
