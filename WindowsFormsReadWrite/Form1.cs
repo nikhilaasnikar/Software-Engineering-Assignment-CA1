@@ -31,24 +31,17 @@ namespace WindowsFormsReadWrite
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            fbd.RootFolder = Environment.SpecialFolder.Desktop;
-            fbd.Description = "+++Select Folder+++";
-            fbd.ShowNewFolderButton = false;
-
-            if (fbd.ShowDialog() == DialogResult.OK)
-            {
-                textBox1.Text = fbd.SelectedPath + "";
-            }
+            OpenFileDialog of = new OpenFileDialog();
+            of.ShowDialog();
+            textBox1.Text = of.FileName;
         }
 
         private void button2_Click(object sender, EventArgs e)
         
         {
-            StreamReader read = new StreamReader(textBox1.Text);
-            RichtextBox1.Text = read.ReadToEnd();
-            read.Close();
-           
+            StreamReader sr = new StreamReader(textBox1.Text);
+            RichtextBox1.Text = sr.ReadToEnd();
+            sr.Close();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
