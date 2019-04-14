@@ -50,32 +50,44 @@ namespace WindowsFormsReadWrite
                         string[] word =stream.ReadToEnd().Split(' ');
                         Array.Sort(word);
 
-                      string sortedfile = "\\sorted" + Path.GetFileName(filename);
+                       string sortedfile = "\\sorted" + Path.GetFileName(filename);
                        StreamWriter streamWriter = new StreamWriter(Path.GetFullPath(path)+sortedfile);
                         //Test//Console.WriteLine(Path.GetFullPath(path) + sortedfile);
-                        foreach ( string sorted in word)
-                        {
-                            
-                            streamWriter.WriteLine(sorted);
-                        }
+                        // termsListà will be your list of sorted word
 
+                        // counts occurrences
+                        var dict = new Dictionary<string, int>();
+
+                        foreach (var value in word)
+                        {
+                            if (dict.ContainsKey(value))
+
+                                dict[value]++;
+                            else
+
+                                dict[value] = 1;
+                        }
+                        foreach (var pair in dict)
+
+                            Console.WriteLine("{1} times {0}", pair.Key, pair.Value);
+
+                        for (int index = 0; index < dict.Count; index++)
+                        {
+                            var item = dict.ElementAt(index);
+                            string itemKey = item.Key;
+                            int itemValue = item.Value;
+                            Console.WriteLine("Sorted values: " + itemKey + "," + itemValue);
+                            streamWriter.WriteLine(itemKey + "," + itemValue);
+                        }
                         streamWriter.Close();
                            
-                        
-                        
                         dirlist.Add(Path.GetPathRoot(path));
                         folderList.Add(sortedfile);
-
                     }
-                    
                 }
                 DriveList.DataSource = dirlist;
                 FolderList.DataSource= folderList;
-
-            }
-            
-            
-        }
+         }
 
         /*private void button2_Click(object sender, EventArgs e)
         {
@@ -131,6 +143,6 @@ namespace WindowsFormsReadWrite
                 DriveList.Items.Add(di);
         }
         */
-       
+       }
     }
 }
