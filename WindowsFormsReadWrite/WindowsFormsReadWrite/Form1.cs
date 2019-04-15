@@ -81,27 +81,20 @@ namespace WindowsFormsReadWrite
                             if (itemValue == 1)
                             {
                                 streamWriter.WriteLine(itemKey);
-<<<<<<< HEAD
                           
-=======
 
->>>>>>> f87bc050440ee558fcc2d34dfecf0e63905f2ba5
                             }
                             else
                             {
                                 streamWriter.WriteLine(itemKey + "," + itemValue);
                             }
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> f87bc050440ee558fcc2d34dfecf0e63905f2ba5
                         }
                         streamWriter.Close();
 
                         dirlist.Add(Path.GetPathRoot(path));
                         folderList.Add(sortedfile);
-<<<<<<< HEAD
+
                     }
                     else if (Path.GetExtension(filename).Contains(".calc"))
                     {
@@ -196,6 +189,4 @@ namespace WindowsFormsReadWrite
                     */
                 }
             }
-        }
-    }
-}
+        
