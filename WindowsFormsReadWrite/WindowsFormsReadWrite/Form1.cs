@@ -35,6 +35,7 @@ namespace WindowsFormsReadWrite
             if (selectfolder.ShowDialog() == DialogResult.OK)
             {
                 List<string> dirlist = new List<string>();
+                List<string> calcArray = new List<string>();
                 List<string> folderList = new List<string>();
                 string path = selectfolder.SelectedPath;
                 string[] files = Directory.GetFiles(path);
@@ -43,34 +44,78 @@ namespace WindowsFormsReadWrite
                 {
                     if (Path.GetExtension(filename).Contains(".txt"))
                     {
-                        tbCurrent.Text = Path.GetFileName(filename)+"\n";
-                         
+                        tbCurrent.Text = Path.GetFileName(filename) + "\n";
+
                         StreamReader stream = new StreamReader(filename);
-                        
-                        string[] word =stream.ReadToEnd().Split(' ');
+
+                        string[] word = stream.ReadToEnd().Split(' ');
                         Array.Sort(word);
 
-                      string sortedfile = "\\sorted" + Path.GetFileName(filename);
-                       StreamWriter streamWriter = new StreamWriter(Path.GetFullPath(path)+sortedfile);
+                        string sortedfile = "\\sorted" + Path.GetFileName(filename);
+                        StreamWriter streamWriter = new StreamWriter(Path.GetFullPath(path) + sortedfile);
                         //Test//Console.WriteLine(Path.GetFullPath(path) + sortedfile);
-                        foreach ( string sorted in word)
-                        {
-                            
-                            streamWriter.WriteLine(sorted);
-                        }
+                        // termsListà will be your list of sorted word
 
+                        // counts occurrences
+                        var dict = new Dictionary<string, int>();
+
+                        foreach (var value in word)
+                        {
+                            if (dict.ContainsKey(value))
+
+                                dict[value]++;
+                            else
+
+                                dict[value] = 1;
+                        }
+                        foreach (var pair in dict)
+
+                            Console.WriteLine("{1} times {0}", pair.Key, pair.Value);
+
+                        for (int index = 0; index < dict.Count; index++)
+                        {
+                            var item = dict.ElementAt(index);
+                            string itemKey = item.Key;
+                            int itemValue = item.Value;
+                            Console.WriteLine("Sorted values: " + itemKey + "," + itemValue);
+                            if (itemValue == 1)
+                            {
+                                streamWriter.WriteLine(itemKey);
+                          
+                            }
+                            else
+                            {
+                                streamWriter.WriteLine(itemKey + "," + itemValue);
+                            }
+                            
+                        }
                         streamWriter.Close();
-                           
-                        
-                        
+
                         dirlist.Add(Path.GetPathRoot(path));
                         folderList.Add(sortedfile);
+                    }
+                    else if (Path.GetExtension(filename).Contains(".calc"))
+                    {
+                        string[] words = File.ReadAllLines(filename);
+                        foreach (string cword in words)
+                        {
+                            //MessageBox.Show(Calc.Tocalc(Calcword));
+                            calcArray.Add(Calc.Tocalc(cword));
+                        }
 
                     }
-                    
+                    DateTime now = DateTime.Now;
+                    StreamWriter calw = new StreamWriter(Path.GetFullPath(path) + "\\"+now.ToShortDateString()+" Answ.txt");
+                    foreach (string item in calcArray)
+                    {
+                        calw.WriteLine(item);
+                    }
+                    calw.Close();
                 }
                 DriveList.DataSource = dirlist;
-                FolderList.DataSource= folderList;
+                FolderList.DataSource = folderList;
+                
+                ///FilesList.DataSource = allfiles;
 
             }
             
