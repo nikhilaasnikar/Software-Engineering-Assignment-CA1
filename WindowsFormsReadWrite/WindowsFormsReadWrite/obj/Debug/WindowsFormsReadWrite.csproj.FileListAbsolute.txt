@@ -18,3 +18,13 @@ C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadW
 C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.csproj.CoreCompileInputs.cache
 C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.exe
 C:\Users\john\Source\Repos\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.pdb
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\bin\Debug\WindowsFormsReadWrite.exe.config
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\bin\Debug\WindowsFormsReadWrite.exe
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\bin\Debug\WindowsFormsReadWrite.pdb
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.csprojAssemblyReference.cache
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.Form1.resources
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.Properties.Resources.resources
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.csproj.GenerateResource.cache
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.csproj.CoreCompileInputs.cache
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.exe
+C:\Users\RSC\Desktop\projects\Software-Engineering-Assignment-CA1\WindowsFormsReadWrite\WindowsFormsReadWrite\obj\Debug\WindowsFormsReadWrite.pdb

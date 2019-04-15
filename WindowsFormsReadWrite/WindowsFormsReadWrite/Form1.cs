@@ -19,11 +19,11 @@ namespace WindowsFormsReadWrite
             selectfolder.RootFolder = Environment.SpecialFolder.Desktop;
         }
 
-       /* private void button1_Click(object sender, EventArgs e)
-        {
-            
+        /* private void button1_Click(object sender, EventArgs e)
+         {
 
-        }*/
+
+         }*/
 
         /*private void button3_Click(object sender, EventArgs e)
         {
@@ -81,18 +81,27 @@ namespace WindowsFormsReadWrite
                             if (itemValue == 1)
                             {
                                 streamWriter.WriteLine(itemKey);
+<<<<<<< HEAD
                           
+=======
+
+>>>>>>> f87bc050440ee558fcc2d34dfecf0e63905f2ba5
                             }
                             else
                             {
                                 streamWriter.WriteLine(itemKey + "," + itemValue);
                             }
+<<<<<<< HEAD
                             
+=======
+
+>>>>>>> f87bc050440ee558fcc2d34dfecf0e63905f2ba5
                         }
                         streamWriter.Close();
 
                         dirlist.Add(Path.GetPathRoot(path));
                         folderList.Add(sortedfile);
+<<<<<<< HEAD
                     }
                     else if (Path.GetExtension(filename).Contains(".calc"))
                     {
@@ -128,54 +137,65 @@ namespace WindowsFormsReadWrite
             tbCurrent.Text = sr.ReadToEnd();
             sr.Close();
         }
+=======
+                    }
+                    /*private void button2_Click(object sender, EventArgs e)
+                    {
+                        StreamReader sr = new StreamReader(tbCurrentDir.Text);
+                        tbCurrent.Text = sr.ReadToEnd();
+                        sr.Close();
+                    }
+>>>>>>> f87bc050440ee558fcc2d34dfecf0e63905f2ba5
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            StreamWriter sw = new StreamWriter(tbCurrentDir.Text, true);
-            sw.WriteLine(textBox2.Text);
-            sw.Close();
-        }
+                    private void button3_Click_1(object sender, EventArgs e)
+                    {
+                        StreamWriter sw = new StreamWriter(tbCurrentDir.Text, true);
+                        sw.WriteLine(textBox2.Text);
+                        sw.Close();
+                    }
 
-        private void DriveList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FolderList.Items.Clear();
+                    private void DriveList_SelectedIndexChanged(object sender, EventArgs e)
+                    {
+                        FolderList.Items.Clear();
 
-            try
-            {
-                DriveInfo drive = (DriveInfo)DriveList.SelectedItem;
-                foreach (DirectoryInfo dirInfo in drive.RootDirectory.GetDirectories())
-                    FolderList.Items.Add(dirInfo);
+                        try
+                        {
+                            DriveInfo drive = (DriveInfo)DriveList.SelectedItem;
+                            foreach (DirectoryInfo dirInfo in drive.RootDirectory.GetDirectories())
+                                FolderList.Items.Add(dirInfo);
 
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+
+                    }
+
+                    private void FolderList_SelectedIndexChanged(object sender, EventArgs e)
+                    {
+                        FilesList.Items.Clear();
+
+                        DirectoryInfo dir = (DirectoryInfo)FolderList.SelectedItem;
+
+                        foreach (FileInfo fi in dir.GetFiles())
+                            FilesList.Items.Add(fi);
+
+                    }
+
+                    private void FilesList_SelectedIndexChanged(object sender, EventArgs e)
+                    {
+
+                    }
+
+                    private void Form1_Load(object sender, EventArgs e)
+                    {
+                        foreach (DriveInfo di in DriveInfo.GetDrives())
+                            DriveList.Items.Add(di);
+                    }
+                    */
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
         }
-
-        private void FolderList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FilesList.Items.Clear();
-
-            DirectoryInfo dir = (DirectoryInfo)FolderList.SelectedItem;
-
-            foreach (FileInfo fi in dir.GetFiles())
-                FilesList.Items.Add(fi);
-
-        }
-
-        private void FilesList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            foreach (DriveInfo di in DriveInfo.GetDrives())
-                DriveList.Items.Add(di);
-        }
-        */
-       
     }
 }
