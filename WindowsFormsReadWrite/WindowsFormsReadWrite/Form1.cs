@@ -18,7 +18,9 @@ namespace WindowsFormsReadWrite
             InitializeComponent();
             selectfolder.RootFolder = Environment.SpecialFolder.Desktop;
         }
-
+        List<string> dirlist = new List<string>();
+        List<string> calcArray = new List<string>();
+        List<string> folderList = new List<string>();
         /* private void button1_Click(object sender, EventArgs e)
          {
 
@@ -34,9 +36,7 @@ namespace WindowsFormsReadWrite
         {
             if (selectfolder.ShowDialog() == DialogResult.OK)
             {
-                List<string> dirlist = new List<string>();
-                List<string> calcArray = new List<string>();
-                List<string> folderList = new List<string>();
+               
                 string path = selectfolder.SelectedPath;
                 string[] files = Directory.GetFiles(path);
                 tbCurrentDir.Text = Path.GetDirectoryName(path);
@@ -92,7 +92,7 @@ namespace WindowsFormsReadWrite
                         }
                         streamWriter.Close();
 
-                        dirlist.Add(Path.GetPathRoot(path));
+                        dirlist.Add(path);
                         folderList.Add(sortedfile);
 
                     }
@@ -107,22 +107,45 @@ namespace WindowsFormsReadWrite
 
                     }
                     DateTime now = DateTime.Now;
-                    StreamWriter calw = new StreamWriter(Path.GetFullPath(path) + "\\"+now.ToShortDateString()+" Answ.txt");
+                    StreamWriter calw = new StreamWriter(Path.GetFullPath(path) + "\\" + now.ToShortDateString() + " Answ.txt");
                     foreach (string item in calcArray)
                     {
                         calw.WriteLine(item);
                     }
                     calw.Close();
+
                 }
                 DriveList.DataSource = dirlist;
                 FolderList.DataSource = folderList;
                 
-                ///FilesList.DataSource = allfiles;
+                //FilesList.DataSource = allfiles;
 
             }
             
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //List all sorted file
+            string folder = string.Empty;
+            foreach (var allDirect in folderList) {
+                folder = folder + Environment.NewLine + allDirect;
+            }
+            textBox1.Text = folder;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //List all directories
+            string sortedfile = string.Empty;
+            foreach (var allDirect in dirlist)
+            {
+                sortedfile = sortedfile + Environment.NewLine + allDirect;
+            }
+            textBox1.Text = sortedfile;
+        }
+
 
         /*private void button2_Click(object sender, EventArgs e)
         {
@@ -187,6 +210,6 @@ namespace WindowsFormsReadWrite
                             DriveList.Items.Add(di);
                     }
                     */
-                }
+    }
             }
         

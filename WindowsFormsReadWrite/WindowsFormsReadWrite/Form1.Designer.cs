@@ -38,6 +38,9 @@
             this.FolderList = new System.Windows.Forms.ListBox();
             this.FilesList = new System.Windows.Forms.ListBox();
             this.selectfolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbCurrentDir
@@ -81,7 +84,6 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "ReadText";
             this.button2.UseVisualStyleBackColor = true;
-           // this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -91,7 +93,6 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "WriteText";
             this.button3.UseVisualStyleBackColor = true;
-           // this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // DriveList
             // 
@@ -100,7 +101,6 @@
             this.DriveList.Name = "DriveList";
             this.DriveList.Size = new System.Drawing.Size(180, 95);
             this.DriveList.TabIndex = 7;
-            //this.DriveList.SelectedIndexChanged += new System.EventHandler(this.DriveList_SelectedIndexChanged);
             // 
             // FolderList
             // 
@@ -109,7 +109,6 @@
             this.FolderList.Name = "FolderList";
             this.FolderList.Size = new System.Drawing.Size(204, 95);
             this.FolderList.TabIndex = 8;
-            //this.FolderList.SelectedIndexChanged += new System.EventHandler(this.FolderList_SelectedIndexChanged);
             // 
             // FilesList
             // 
@@ -118,13 +117,44 @@
             this.FilesList.Name = "FilesList";
             this.FilesList.Size = new System.Drawing.Size(246, 95);
             this.FilesList.TabIndex = 9;
-            //this.FilesList.SelectedIndexChanged += new System.EventHandler(this.FilesList_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(736, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 34);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "DisplaySortedFiles";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(858, 93);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(293, 185);
+            this.textBox1.TabIndex = 11;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(736, 192);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 29);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "DisplayDirectories";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 463);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.FilesList);
             this.Controls.Add(this.FolderList);
             this.Controls.Add(this.DriveList);
@@ -136,7 +166,6 @@
             this.Controls.Add(this.tbCurrentDir);
             this.Name = "Form1";
             this.Text = "Form1";
-           // this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +183,9 @@
         private System.Windows.Forms.ListBox FolderList;
         private System.Windows.Forms.ListBox FilesList;
         private System.Windows.Forms.FolderBrowserDialog selectfolder;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
