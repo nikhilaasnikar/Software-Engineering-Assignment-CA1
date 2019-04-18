@@ -43,87 +43,97 @@
             // 
             // tbCurrentDir
             // 
-            this.tbCurrentDir.Location = new System.Drawing.Point(224, 84);
+            this.tbCurrentDir.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tbCurrentDir.Location = new System.Drawing.Point(173, 84);
             this.tbCurrentDir.Multiline = true;
             this.tbCurrentDir.Name = "tbCurrentDir";
-            this.tbCurrentDir.Size = new System.Drawing.Size(206, 32);
+            this.tbCurrentDir.Size = new System.Drawing.Size(293, 32);
             this.tbCurrentDir.TabIndex = 0;
             // 
             // tbCurrent
             // 
-            this.tbCurrent.Location = new System.Drawing.Point(224, 122);
+            this.tbCurrent.Location = new System.Drawing.Point(795, 415);
             this.tbCurrent.Multiline = true;
             this.tbCurrent.Name = "tbCurrent";
-            this.tbCurrent.Size = new System.Drawing.Size(399, 131);
+            this.tbCurrent.Size = new System.Drawing.Size(10, 10);
             this.tbCurrent.TabIndex = 3;
             // 
             // btnselectfolder
             // 
-            this.btnselectfolder.Location = new System.Drawing.Point(453, 84);
+            this.btnselectfolder.AutoSize = true;
+            this.btnselectfolder.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnselectfolder.Location = new System.Drawing.Point(530, 84);
             this.btnselectfolder.Name = "btnselectfolder";
-            this.btnselectfolder.Size = new System.Drawing.Size(84, 32);
+            this.btnselectfolder.Size = new System.Drawing.Size(103, 32);
             this.btnselectfolder.TabIndex = 4;
             this.btnselectfolder.Text = "SelectFolder";
-            this.btnselectfolder.UseVisualStyleBackColor = true;
+            this.btnselectfolder.UseVisualStyleBackColor = false;
             this.btnselectfolder.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // DriveList
             // 
+            this.DriveList.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.DriveList.FormattingEnabled = true;
-            this.DriveList.Location = new System.Drawing.Point(46, 330);
+            this.DriveList.Location = new System.Drawing.Point(674, 84);
             this.DriveList.Name = "DriveList";
-            this.DriveList.Size = new System.Drawing.Size(180, 95);
+            this.DriveList.Size = new System.Drawing.Size(204, 134);
             this.DriveList.TabIndex = 7;
             // 
             // FolderList
             // 
+            this.FolderList.BackColor = System.Drawing.SystemColors.MenuBar;
             this.FolderList.FormattingEnabled = true;
-            this.FolderList.Location = new System.Drawing.Point(262, 330);
+            this.FolderList.Location = new System.Drawing.Point(674, 242);
             this.FolderList.Name = "FolderList";
-            this.FolderList.Size = new System.Drawing.Size(204, 95);
+            this.FolderList.Size = new System.Drawing.Size(204, 173);
             this.FolderList.TabIndex = 8;
             // 
             // FilesList
             // 
             this.FilesList.FormattingEnabled = true;
-            this.FilesList.Location = new System.Drawing.Point(513, 330);
+            this.FilesList.Location = new System.Drawing.Point(777, 421);
             this.FilesList.Name = "FilesList";
-            this.FilesList.Size = new System.Drawing.Size(246, 95);
+            this.FilesList.Size = new System.Drawing.Size(10, 4);
             this.FilesList.TabIndex = 9;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(736, 131);
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Location = new System.Drawing.Point(530, 210);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 34);
+            this.button1.Size = new System.Drawing.Size(103, 34);
             this.button1.TabIndex = 10;
             this.button1.Text = "DisplaySortedFiles";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(858, 93);
+            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox1.Location = new System.Drawing.Point(173, 139);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(293, 185);
+            this.textBox1.Size = new System.Drawing.Size(293, 286);
             this.textBox1.TabIndex = 11;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(736, 192);
+            this.button4.AutoSize = true;
+            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button4.Location = new System.Drawing.Point(534, 317);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 29);
+            this.button4.Size = new System.Drawing.Size(101, 29);
             this.button4.TabIndex = 12;
             this.button4.Text = "DisplayDirectories";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Info;
@@ -154,6 +164,7 @@
             this.Controls.Add(this.tbCurrentDir);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

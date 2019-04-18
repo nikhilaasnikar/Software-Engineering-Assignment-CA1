@@ -15,6 +15,7 @@ namespace WindowsFormsReadWrite
     {
         public Form1()
         {
+            this.BackgroundImage = Properties.Resources.im;
             this.BackColor = Color.LightBlue;
             InitializeComponent();
             selectfolder.RootFolder = Environment.SpecialFolder.Desktop;
@@ -114,6 +115,7 @@ namespace WindowsFormsReadWrite
                     calw.Close();
 
                 }
+                MessageBox.Show("Calculations completed in .calc files");
                 DriveList.DataSource = dirlist;
                 FolderList.DataSource = folderList;
 
@@ -144,6 +146,11 @@ namespace WindowsFormsReadWrite
                 sortedfile = sortedfile + Environment.NewLine + allDirect;
             }
             textBox1.Text = sortedfile;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
 
