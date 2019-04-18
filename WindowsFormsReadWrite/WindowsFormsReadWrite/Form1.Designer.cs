@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.tbCurrentDir = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tbCurrent = new System.Windows.Forms.TextBox();
             this.btnselectfolder = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.DriveList = new System.Windows.Forms.ListBox();
             this.FolderList = new System.Windows.Forms.ListBox();
             this.FilesList = new System.Windows.Forms.ListBox();
@@ -41,22 +38,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbCurrentDir
             // 
-            this.tbCurrentDir.Location = new System.Drawing.Point(224, 44);
+            this.tbCurrentDir.Location = new System.Drawing.Point(224, 84);
             this.tbCurrentDir.Multiline = true;
             this.tbCurrentDir.Name = "tbCurrentDir";
             this.tbCurrentDir.Size = new System.Drawing.Size(206, 32);
             this.tbCurrentDir.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(389, 262);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 20);
-            this.textBox2.TabIndex = 2;
             // 
             // tbCurrent
             // 
@@ -68,31 +59,13 @@
             // 
             // btnselectfolder
             // 
-            this.btnselectfolder.Location = new System.Drawing.Point(447, 44);
+            this.btnselectfolder.Location = new System.Drawing.Point(453, 84);
             this.btnselectfolder.Name = "btnselectfolder";
             this.btnselectfolder.Size = new System.Drawing.Size(84, 32);
             this.btnselectfolder.TabIndex = 4;
             this.btnselectfolder.Text = "SelectFolder";
             this.btnselectfolder.UseVisualStyleBackColor = true;
             this.btnselectfolder.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(355, 93);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "ReadText";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(215, 259);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "WriteText";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // DriveList
             // 
@@ -147,22 +120,37 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Info;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(473, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.MinimumSize = new System.Drawing.Size(20, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(291, 48);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Windows Form Application\r\nNikhil Aasnikar and Caleb Eke\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 463);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.FilesList);
             this.Controls.Add(this.FolderList);
             this.Controls.Add(this.DriveList);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnselectfolder);
             this.Controls.Add(this.tbCurrent);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.tbCurrentDir);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -174,11 +162,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbCurrentDir;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox tbCurrent;
         private System.Windows.Forms.Button btnselectfolder;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox DriveList;
         private System.Windows.Forms.ListBox FolderList;
         private System.Windows.Forms.ListBox FilesList;
@@ -186,6 +171,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
     }
 }
 

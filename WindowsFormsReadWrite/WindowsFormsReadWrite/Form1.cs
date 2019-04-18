@@ -15,6 +15,7 @@ namespace WindowsFormsReadWrite
     {
         public Form1()
         {
+            this.BackColor = Color.LightBlue;
             InitializeComponent();
             selectfolder.RootFolder = Environment.SpecialFolder.Desktop;
         }
@@ -107,6 +108,7 @@ namespace WindowsFormsReadWrite
 
                     }
                     DateTime now = DateTime.Now;
+                    
                     StreamWriter calw = new StreamWriter(Path.GetFullPath(path) + "\\" + now.ToShortDateString() + " Answ.txt");
                     foreach (string item in calcArray)
                     {
