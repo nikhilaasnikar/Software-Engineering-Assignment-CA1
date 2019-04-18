@@ -15,7 +15,7 @@ namespace WindowsFormsReadWrite
     {
         public Form1()
         {
-            this.BackgroundImage = Properties.Resources.im;
+            this.BackgroundImage = Properties.Resources.MY;
             this.BackColor = Color.LightBlue;
             InitializeComponent();
             selectfolder.RootFolder = Environment.SpecialFolder.Desktop;

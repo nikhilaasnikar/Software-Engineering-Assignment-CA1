@@ -2022,4 +2022,11 @@
         igLEm71o3dDUeaKAJS350dqjzS5O2gVhVPOe9PqIHFPX+lAH/9k=
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kevin-wolf-1520326-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WFD1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WFD1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

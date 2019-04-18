@@ -43,7 +43,7 @@
             // 
             // tbCurrentDir
             // 
-            this.tbCurrentDir.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tbCurrentDir.BackColor = System.Drawing.SystemColors.Window;
             this.tbCurrentDir.Location = new System.Drawing.Point(173, 84);
             this.tbCurrentDir.Multiline = true;
             this.tbCurrentDir.Name = "tbCurrentDir";
@@ -61,7 +61,8 @@
             // btnselectfolder
             // 
             this.btnselectfolder.AutoSize = true;
-            this.btnselectfolder.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnselectfolder.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnselectfolder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnselectfolder.Location = new System.Drawing.Point(530, 84);
             this.btnselectfolder.Name = "btnselectfolder";
             this.btnselectfolder.Size = new System.Drawing.Size(103, 32);
@@ -72,11 +73,11 @@
             // 
             // DriveList
             // 
-            this.DriveList.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DriveList.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DriveList.FormattingEnabled = true;
             this.DriveList.Location = new System.Drawing.Point(674, 84);
             this.DriveList.Name = "DriveList";
-            this.DriveList.Size = new System.Drawing.Size(204, 134);
+            this.DriveList.Size = new System.Drawing.Size(304, 134);
             this.DriveList.TabIndex = 7;
             // 
             // FolderList
@@ -85,7 +86,7 @@
             this.FolderList.FormattingEnabled = true;
             this.FolderList.Location = new System.Drawing.Point(674, 242);
             this.FolderList.Name = "FolderList";
-            this.FolderList.Size = new System.Drawing.Size(204, 173);
+            this.FolderList.Size = new System.Drawing.Size(304, 186);
             this.FolderList.TabIndex = 8;
             // 
             // FilesList
@@ -99,7 +100,8 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(530, 210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 34);
@@ -121,7 +123,8 @@
             // button4
             // 
             this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button4.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Location = new System.Drawing.Point(534, 317);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(101, 29);
