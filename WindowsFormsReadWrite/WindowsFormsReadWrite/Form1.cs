@@ -15,32 +15,20 @@ namespace WindowsFormsReadWrite
     {
         public Form1()
         {
-            this.BackgroundImage = Properties.Resources.WFD;
-            InitializeComponent();
-            var timer = new Timer();
-            //change the background image every second  
-            timer.Interval = 5000;
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
-
             this.BackColor = Color.LightBlue;
-            
             InitializeComponent();
             selectfolder.RootFolder = Environment.SpecialFolder.Desktop;
-        }
-        void timer_Tick(object sender, EventArgs e)
-        {
-            //add image in list from resource file.  
-            List<Bitmap> lisimage = new List<Bitmap>();
-            lisimage.Add(Properties.Resources.im);
-            lisimage.Add(Properties.Resources.WFD);
-            var indexbackimage = DateTime.Now.Second % lisimage.Count;
-            this.BackgroundImage = lisimage[indexbackimage];
         }
         List<string> dirlist = new List<string>();
         List<string> calcArray = new List<string>();
         List<string> folderList = new List<string>();
+        /* private void button1_Click(object sender, EventArgs e)
+         {
+         }*/
 
+        /*private void button3_Click(object sender, EventArgs e)
+        {
+        }*/
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -54,6 +42,8 @@ namespace WindowsFormsReadWrite
                 {
                     if (Path.GetExtension(filename).Contains(".txt"))
                     {
+                        tbCurrent.Text = Path.GetFileName(filename) + "\n";
+
                         StreamReader stream = new StreamReader(filename);
 
                         string[] word = stream.ReadToEnd().Split(' ');
@@ -61,7 +51,10 @@ namespace WindowsFormsReadWrite
 
                         string sortedfile = "\\sorted" + Path.GetFileName(filename);
                         StreamWriter streamWriter = new StreamWriter(Path.GetFullPath(path) + sortedfile);
+                        //Test//Console.WriteLine(Path.GetFullPath(path) + sortedfile);
+                        // termsListà will be your list of sorted word
 
+                        // counts occurrences
                         var dict = new Dictionary<string, int>();
 
                         foreach (var value in word)
@@ -106,7 +99,7 @@ namespace WindowsFormsReadWrite
                         string[] words = File.ReadAllLines(filename);
                         foreach (string cword in words)
                         {
-
+                            //MessageBox.Show(Calc.Tocalc(Calcword));
                             calcArray.Add(Calc.Tocalc(cword));
                         }
 
@@ -119,14 +112,12 @@ namespace WindowsFormsReadWrite
                         calw.WriteLine(item);
                     }
                     calw.Close();
-                    
 
                 }
-                MessageBox.Show("Calculations completed in .calc files");
                 DriveList.DataSource = dirlist;
                 FolderList.DataSource = folderList;
 
-
+                //FilesList.DataSource = allfiles;
 
             }
 
@@ -135,7 +126,7 @@ namespace WindowsFormsReadWrite
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            //List all sorted file
             string folder = string.Empty;
             foreach (var allDirect in folderList)
             {
@@ -146,7 +137,7 @@ namespace WindowsFormsReadWrite
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            //List all directories
             string sortedfile = string.Empty;
             foreach (var allDirect in dirlist)
             {
@@ -156,7 +147,56 @@ namespace WindowsFormsReadWrite
         }
 
 
-
+        /*private void button2_Click(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(tbCurrentDir.Text);
+            tbCurrent.Text = sr.ReadToEnd();
+            sr.Close();
+        }
+=======
+                    }
+                    /*private void button2_Click(object sender, EventArgs e)
+                    {
+                        StreamReader sr = new StreamReader(tbCurrentDir.Text);
+                        tbCurrent.Text = sr.ReadToEnd();
+                        sr.Close();
+                    }
+>>>>>>> f87bc050440ee558fcc2d34dfecf0e63905f2ba5
+                    private void button3_Click_1(object sender, EventArgs e)
+                    {
+                        StreamWriter sw = new StreamWriter(tbCurrentDir.Text, true);
+                        sw.WriteLine(textBox2.Text);
+                        sw.Close();
+                    }
+                    private void DriveList_SelectedIndexChanged(object sender, EventArgs e)
+                    {
+                        FolderList.Items.Clear();
+                        try
+                        {
+                            DriveInfo drive = (DriveInfo)DriveList.SelectedItem;
+                            foreach (DirectoryInfo dirInfo in drive.RootDirectory.GetDirectories())
+                                FolderList.Items.Add(dirInfo);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    private void FolderList_SelectedIndexChanged(object sender, EventArgs e)
+                    {
+                        FilesList.Items.Clear();
+                        DirectoryInfo dir = (DirectoryInfo)FolderList.SelectedItem;
+                        foreach (FileInfo fi in dir.GetFiles())
+                            FilesList.Items.Add(fi);
+                    }
+                    private void FilesList_SelectedIndexChanged(object sender, EventArgs e)
+                    {
+                    }
+                    private void Form1_Load(object sender, EventArgs e)
+                    {
+                        foreach (DriveInfo di in DriveInfo.GetDrives())
+                            DriveList.Items.Add(di);
+                    }
+                    */
     }
-}           
-        
+}
